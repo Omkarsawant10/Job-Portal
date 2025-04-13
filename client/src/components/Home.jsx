@@ -13,7 +13,9 @@ import { useGetAllJobs } from '@/hooks/useGetAllJobs'
 
 
 const Home = () => {
-  useGetAllJobs();
+  
+    useGetAllJobs();
+  
   const {user}=useSelector(state=>state.auth);
   const navigate=useNavigate();
   useEffect(()=>{

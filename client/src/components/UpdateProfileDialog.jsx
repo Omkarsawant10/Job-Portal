@@ -31,7 +31,7 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
     }
 
     const fileChangeHandler=(e)=>{
-        const file=e.target.files?.[0];
+        const file=e.target.files[0];
         setInput((prev)=>({...prev,file}))
     }
     const submitHandler=async(e)=>{
@@ -44,6 +44,8 @@ const UpdateProfileDialog = ({ open, setOpen }) => {
         formData.append("skills",input.skills)
         
         if(input.file){
+            console.log("Selected file:", input.file);
+            console.log("MIME type:", input.file.type);
             formData.append("file",input.file)
         }
         try {

@@ -13,10 +13,7 @@ const filterData = [
     filterType: "Industry",
     array: ["Frontend Developer", "Backend Developer", "FullStack Developer"]
   },
-  {
-    filterType: "Salary",
-    array: ["0-40K", "42K - 1LPA", "1LPA - 5LPA"]
-  }
+  
 ];
 
 const FilterCard = () => {
