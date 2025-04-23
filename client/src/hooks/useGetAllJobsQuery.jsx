@@ -13,7 +13,7 @@ export const useGetAllJobsQuery=()=>{
         
         const fetchAllJobs=async ()=>{
             try {
-                const response=await axios.get(`${JOB_API_END_POINT}/get?keyword=${searchedQueryBrowse}`,{withCredentials:true});
+                const response=await axios.get(`${JOB_API_END_POINT}/getjobquery?keyword=${searchedQueryBrowse}`,{withCredentials:true});
                 
                 if(response.data.success){
                     dispatch(setAllJobsQuery(response.data.jobs));

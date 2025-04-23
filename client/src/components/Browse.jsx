@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {  setSearchedQueryBrowse } from '@/redux/jobSlice';
 
 import { useGetAllJobsQuery } from '@/hooks/useGetAllJobsQuery';
+import Footer from './shared/Footer';
 
 
 const Browse = () => {
@@ -24,7 +25,7 @@ const Browse = () => {
             <div className='max-w-7xl mx-auto my-10'>
 
                 <h1 className='text-lg font-bold my-10'>Search Results {getAllJobsQuery.length}</h1>
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid grid-cols-4 gap-4'>
                     {
                         getAllJobsQuery.map((job) => {
                             return (
@@ -34,6 +35,7 @@ const Browse = () => {
                     }
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
